@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{FC2306C0-4964-4CD8-9592-38819ADACF0E}</ProjectGuid>
+    <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dorothy</RootNamespace>
+    <AssemblyName>Dorothy</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <XnaFrameworkVersion>v4.0</XnaFrameworkVersion>
+    <XnaPlatform>Windows</XnaPlatform>
+    <XnaProfile>Reach</XnaProfile>
+    <XnaCrossPlatformGroupID>e1e2dda1-7eca-4462-a374-23c6f0d7065e</XnaCrossPlatformGroupID>
+    <XnaOutputType>Library</XnaOutputType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+    <XnaCompressContent>false</XnaCompressContent>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+    <XnaCompressContent>true</XnaCompressContent>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.GamerServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Xact, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Video, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Avatar, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Storage, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="mscorlib">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Animations\Animations.cs" />
+    <Compile Include="Animations\IAnimation.cs" />
+    <Compile Include="Animations\Idle.cs" />
+    <Compile Include="Animations\Parallel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Animations\PropertyAnimation.cs" />
+    <Compile Include="Animations\Sequence.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cameras\DefaultCamera.cs" />
+    <Compile Include="Cameras\oCameraManager.cs" />
+    <Compile Include="Cameras\QuakeCamera.cs" />
+    <Compile Include="Cameras\ICamera.cs" />
+    <Compile Include="Cameras\FreeLancerCamera.cs" />
+    <Compile Include="Core\DrawRoot.cs" />
+    <Compile Include="Core\oDrawQueue.cs" />
+    <Compile Include="Core\oGraphic.cs" />
+    <Compile Include="Effects\BlurEffect.cs" />
+    <Compile Include="Effects\MirrorEffect.cs" />
+    <Compile Include="Effects\SaturationEffect.cs" />
+    <Compile Include="Effects\SpriteEffect.cs" />
+    <Compile Include="Effects\PaintEffect.cs" />
+    <Compile Include="Game\Mirror.cs" />
+    <Compile Include="Game\Picker.cs" />
+    <Compile Include="Paints\CirclePaint.cs" />
+    <Compile Include="Paints\LinePaint.cs" />
+    <Compile Include="Paints\PaintGroup.cs" />
+    <Compile Include="Paints\RectanglePaint.cs" />
+    <Compile Include="Data\DataSaver.cs" />
+    <Compile Include="Data\oFormatter.cs" />
+    <Compile Include="Data\oContent.cs" />
+    <Compile Include="Data\Resource.cs" />
+    <Compile Include="Defs\ActionDef.cs" />
+    <Compile Include="Defs\AnimationDefs.cs" />
+    <Compile Include="Defs\LevelDef.cs" />
+    <Compile Include="Defs\Model2DDef.cs" />
+    <Compile Include="Defs\RoleDef.cs" />
+    <Compile Include="Defs\SpriteDef.cs" />
+    <Compile Include="Defs\TextureDef.cs" />
+    <Compile Include="Events\Event.cs" />
+    <Compile Include="Events\EventListener.cs" />
+    <Compile Include="Events\EventType.cs" />
+    <Compile Include="Events\oEventManager.cs" />
+    <Compile Include="Game\Actions\IAction.cs" />
+    <Compile Include="Animations\Easer.cs" />
+    <Compile Include="Animations\Frame.cs" />
+    <Compile Include="Defs\FrameDef.cs" />
+    <Compile Include="Cameras\BasicCamera.cs" />
+    <Compile Include="Cameras\DrawUnitCamera.cs" />
+    <Compile Include="Core\Component.cs" />
+    <Compile Include="Core\Drawable.cs" />
+    <Compile Include="Core\DrawComponent.cs" />
+    <Compile Include="Effects\oEffectManager.cs" />
+    <Compile Include="Core\oInput.cs" />
+    <Compile Include="Core\oSceneManager.cs" />
+    <Compile Include="Effects\IEffects.cs" />
+    <Compile Include="Core\IUpdatable.cs" />
+    <Compile Include="Core\RepeatSprite.cs" />
+    <Compile Include="Core\Scene.cs" />
+    <Compile Include="Core\Sprite.cs" />
+    <Compile Include="Core\Timer.cs" />
+    <Compile Include="Core\UpdateController.cs" />
+    <Compile Include="Game\ContactListener.cs" />
+    <Compile Include="Game\DrawUnit.cs" />
+    <Compile Include="Defs\DrawUnitDef.cs" />
+    <Compile Include="Game\oGroupManager.cs" />
+    <Compile Include="Game\Model2D.cs" />
+    <Compile Include="Game\Role.cs" />
+    <Compile Include="Game\World.cs" />
+    <Compile Include="Game\Sensor.cs" />
+    <Compile Include="Game\Unit.cs" />
+    <Compile Include="Defs\UnitDef.cs" />
+    <Compile Include="Helpers\oHelper.cs" />
+    <Compile Include="oGame.cs" />
+    <Compile Include="Particles\Particle.cs" />
+    <Compile Include="Defs\ParticleDef.cs" />
+    <Compile Include="Particles\ParticleSet.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Box2D\Box2D.csproj">
+      <Project>{22791486-E721-4511-AA4B-DA26CF5D0F2E}</Project>
+      <Name>Box2D</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SharpZipLib\SharpZipLib.csproj">
+      <Project>{94137A41-A14B-4B77-A59C-58C4AC3DD8F4}</Project>
+      <Name>SharpZipLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
+  <!--
+      To modify your build process, add your task inside one of the targets below and uncomment it. 
+      Other similar extension points exist, see Microsoft.Common.targets.
+      <Target Name="BeforeBuild">
+      </Target>
+      <Target Name="AfterBuild">
+      </Target>
+    -->
+</Project>
